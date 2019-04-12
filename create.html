@@ -1,13 +1,31 @@
 <DOCTYPE html>
 <html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
 <body>
-<h1>Create a new poll</h1>
-<br>
-<p>TODO:</p>
-<ul>
-    <li>Add form with fields for fundraiser name, description, image, goal</li>
-    <li>Make sure all fields have placeholder text as hints</li>
-</ul>
-</table>
+    <section class="main">
+        <h1>Create a new poll</h1>
+        <br>
+        <p>TODO:</p>
+        <ul>
+            <li>Make sure all fields have placeholder text as hints</li>
+        </ul>
+        <form>
+            <label for="name">Name: </label>
+            <input type="text" name="name">
+            <br/>
+            <label for="image">Image: </label>
+            <input type="file" name="image">
+            <br/>
+            <label for="desc">Description: </label>
+            <input type="textarea" rows="4" name="desc">
+            <br/>
+            <label for="goal">Goal: </label>
+            <input type="text" name="goal">
+            <br/>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
 </body>
 </html>
