@@ -4,25 +4,31 @@ body {
 }
 
 .main {
-    margin: 0px 200px;
+    margin: 0% 15% 0% 15%;
     background-color: white;
     height: 95%;
     border: 3px solid darkgray;
     border-radius: 0px 0px 10px 10px;
 }
 
-#nav {
+.nav {
     background-color: white;
-    height: 50px;
     width: 100%;
-    padding: 0px 0px;
-    margin: 0px;
+    border-bottom: 2px solid darkgray;
+    overflow: hidden;
 }
 
-#nav a {
+.nav a {
     float: left;
     display: block;
     text-align: center;
     padding: 12px;
     font-size: 12pt;
+    border-right: 1px solid gray;
+}
+
+.nav-right {
+    float: right;
+    border-right: 0px;
+    border-left: 1px solid gray;
 }
