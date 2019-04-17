@@ -1,22 +1,24 @@
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="javascript/functions.js"></script>
 
 </head>
 
 <body>
   <section class = "main">
 
-    <form class = "login">
+    <form class = "login" action = "php/login.php" method = "post">
       <h1> Sign In </h1>
       <div id = "labels">
-        <label for="username">Name: </label> <br>
+        <label for="username">Username: </label> <br>
         <label for="password">Password: </label>
       </div>
 
       <div id = "inputs">
         <input class = "loginInput" type="text" name="username" align="right"> <br>
         <input class = "loginInput" type="password" name="password" align="right">
+        <input type="submit" value ="Submit"> </button>
       </div>
 
     </form>
