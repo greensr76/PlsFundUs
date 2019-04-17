@@ -1,13 +1,28 @@
 body {
     background-color: rgb(94, 123, 133);
-    padding: 0px 150px;
     margin: 0px;
 }
 
 .main {
-    margin: 0px 50px;
+    margin: 0px 200px;
     background-color: white;
     height: 95%;
     border: 3px solid darkgray;
-    border-radius: 10px;
+    border-radius: 0px 0px 10px 10px;
+}
+
+#nav {
+    background-color: white;
+    height: 50px;
+    width: 100%;
+    padding: 0px 0px;
+    margin: 0px;
+}
+
+#nav a {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 12px;
+    font-size: 12pt;
 }
