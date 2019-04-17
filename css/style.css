@@ -11,6 +11,39 @@ body {
     border-radius: 0px 0px 10px 10px;
 }
 
+.login {
+  text-align: center;
+  font-size: 60px;
+  clear: both;
+}
+
+#labels{
+  text-align: left;
+  display: inline-block;
+
+
+
+
+}
+
+#inputs {
+  text-align: left;
+  display: inline-block;
+
+}
+
+.loginInput{
+  height: 20px;
+  margin-bottom: 30px;
+  width:250px;
+  height:40px;
+  float-right;
+  font-size: 30px;
+
+
+}
+
+
 #nav {
     background-color: white;
     height: 50px;
