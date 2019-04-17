@@ -7,15 +7,20 @@ var generateNav = function () {
     container.setAttribute("class", "nav");
 
     var navLeft = document.createElement("section");
+    var navRight = document.createElement("section");
+    navRight.setAttribute("class", "nav-right");
+
     var brand = document.createElement("a");
     brand.setAttribute("href", "index.html");
-    brand.appendChild(document.createTextNode("Brand image here"));
+    brand.appendChild(document.createTextNode("PlsFundMe"));
     navLeft.appendChild(brand);
+    var create = document.createElement("a");
+    create.setAttribute("href", "create.html");
+    create.appendChild(document.createTextNode("Create"));
+    navLeft.appendChild(create);
 
-    var navRight = document.createElement("section");
     var register = document.createElement("a");
-    register.setAttribute("href", "#");
-    navRight.setAttribute("class", "nav-right");
+    register.setAttribute("href", "login.html");
     register.appendChild(document.createTextNode("Register"));
     navRight.appendChild(register);
 
