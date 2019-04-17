@@ -46,7 +46,7 @@ CREATE TABLE `funds` (
 CREATE TABLE `users` (
   `ID` int(11) NOT NULL,
   `Name` text,
-  `Passwrod` text
+  `Password` text
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
