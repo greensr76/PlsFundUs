@@ -4,56 +4,21 @@ body {
 }
 
 .main {
-    margin: 0px 200px;
+    margin: 0% 15% 0% 15%;
     background-color: white;
     height: 95%;
     border: 3px solid darkgray;
     border-radius: 0px 0px 10px 10px;
 }
 
-.login {
-  text-align: center;
-  font-size: 60px;
-  clear: both;
-}
-
-#labels{
-  text-align: left;
-  display: inline-block;
-
-
-
-
-}
-
-#inputs {
-  text-align: left;
-  display: inline-block;
-
-}
-
-.loginInput{
-  height: 20px;
-  margin-bottom: 30px;
-  width:250px;
-  height:40px;
-  float-right;
-  font-size: 30px;
-
-}
-
-
-
-
-#nav {
+.nav {
     background-color: white;
-    height: 50px;
     width: 100%;
-    padding: 0px 0px;
-    margin: 0px;
+    border-bottom: 2px solid darkgray;
+    overflow: hidden;
 }
 
-#nav a {
+.nav a {
     float: left;
     display: block;
     text-align: center;
