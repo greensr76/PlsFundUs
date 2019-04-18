@@ -1,42 +1,35 @@
 <?php
-//Building Tables
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbName = "plsfundus";
 
-$conn = new mysqli($servername,$username,$password,$dbName);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+  include('connect.php');
+  session_start();
 
   $username = " ";
   $password = " ";
 
-  if(isset(POST_["username"]) && isset(POST_["password"])){
-    $username = POST_["username"];
-    $password = POST_["password"];
+  if(isset($_POST["username"]) && isset($_POST["password"])){
+    $username = $_POST["username"];
+    $password = $_POST["password"];
 
-    $sql = "SELECT password FROM users WHERE name = $username";
+    $sql = "SELECT ID FROM users WHERE NAME = '$username' AND PASSWORD = '$password'";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-        while($row = $result->fetch_assoc(){
+        $row = $result->fetch_assoc();
 
-          if ($password = $row["password"]){
-            echo "Login Successful";
-          }
-          else{
-            echo "Invalid username and password";
-          }
-        }
+        echo "Login Successful";
+        $_SESSOIN['loginID'] = $row['ID'];
+        $_SESSION['loginUser'] = $username;
 
+
+      //  header("location: ../index.html");
+      }
+
+    else {
+      echo "Invalid Login";
+    }
   }
 
-  else {
-    echo "ALL Fields must be filled out";
-  }
+  $conn->close();
 
 
 
