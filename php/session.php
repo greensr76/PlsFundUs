@@ -13,11 +13,14 @@ if ($db->connect_error) {
 }
 
 //Attempted Session (I've never done of these before)
-session_start();
+if (!isset($_SESSION)) {
+    session_start();
+}
 
-//   if(!isset($_SESSION['userID'])){
-//      header("location:login.html");
-//      die();
-//   }
+$session_value=(isset($_SESSION['loginID']));
+if(!$session_value || $session_value != true){
+    header("location:login.html");
+    die();
+}
 
- ?>
+?>

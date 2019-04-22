@@ -1,12 +1,4 @@
-<?php
-include('php/session.php');
-if( isset( $_SESSION['loginID'] ) ) {
-    // Session is active
-} else {
-    // Session not active
-}
-?>
-
+<?php include('php/session.php');?>
 <!DOCTYPE html>
 <html>
 <head>
