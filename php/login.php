@@ -1,7 +1,6 @@
 <?php
 
   include('connect.php');
-  session_start();
 
   $username = " ";
   $password = " ";
@@ -36,11 +35,11 @@
             $row = $result->fetch_assoc();
 
             echo "Login Successful";
-            $_SESSOIN['loginID'] = $row['ID'];
+            $_SESSION['loginID'] = $row['ID'];
             $_SESSION['loginUser'] = $username;
 
 
-            header("location: ../index.html");
+            header("location: ../index.php");
           }
 
         else {
