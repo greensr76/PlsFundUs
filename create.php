@@ -14,19 +14,27 @@
             <li>Make sure all fields have placeholder text as hints</li>
         </ul>
         <form action = "php/create.php" method = "post">
-            <label for="name">Name: </label>
-            <input type="text" name="name">
-            <br/>
-            <label for="image">Image: </label>
-            <input type="file" name="image">
-            <br/>
-            <label for="desc">Description: </label>
-            <input type="textarea" rows="4" name="desc">
-            <br/>
-            <label for="goal">Goal: </label>
-            <input type="text" name="goal">
-            <br/>
-            <button type="submit">Submit</button>
+            <table>
+                <tr>
+                    <td><label for="name">Name: </label></td>
+                    <td><input type="text" name="name"></td>
+                </tr>
+                <tr>
+                    <td><label for="image">Image: </label></td>
+                    <td><input type="file" name="image"></td>
+                </tr>
+                <tr>
+                    <td><label for="desc">Description: </label></td>
+                    <td><textarea rows="4" name="desc"></textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="goal">Goal: </label></td>
+                    <td><input type="text" name="goal"></td>
+                </tr>
+                <tr>
+                    <td><button type="submit">Submit</button></td>
+                </tr>
+            </table>
         </form>
     </section>
 </body>

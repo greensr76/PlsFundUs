@@ -4,8 +4,6 @@ body {
     font-family: 'Trebuchet MS'
 }
 
-
-
 .main {
     margin: 0% 15% 0% 15%;
     padding: 10px;
@@ -16,38 +14,12 @@ body {
     border-radius: 0px 0px 10px 10px;
 }
 
-.login {
-    text-align: center;
-    font-size: 60px;
-    clear: both;
-}
-
-#labels{
-    text-align: left;
-    display: inline-block;
-}
-
-#inputs {
-    text-align: left;
-    display: inline-block;
-}
-
-.loginInput{
-    height: 20px;
-    margin-bottom: 30px;
-    width:250px;
-    height:40px;
-    float: right;
-    font-size: 30px;
-}
-
 .nav {
     background-color: white;
     width: 100%;
     border-bottom: 2px solid darkgray;
     overflow: hidden;
 }
-
 .nav a {
     float: left;
     display: block;
@@ -63,12 +35,21 @@ body {
 .nav a:hover {
     color: lightgray;
 }
-
 .nav-right {
     float: right;
 }
-
 #navName {
     background-color: white;
     color: darkred;
+}
+
+table, input, textarea{
+    float: left;
+}
+label {
+    float: right;
+    font-weight: bold;
+}
+td {
+    height: 30px;
 }
