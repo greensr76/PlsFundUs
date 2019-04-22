@@ -4,7 +4,6 @@
 <head>
     <title>Fund | Pls Fund Us</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script src="javascript/functions.js"></script>
 </head>
 <body>
     <section class="main">
