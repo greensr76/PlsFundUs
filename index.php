@@ -1,4 +1,5 @@
-<?php include('php/nav.php'); ?>
+<?php include('php/nav.php'); 
+echo $_SESSION['loginUser'];?>
 <!DOCTYPE html>
 <html>
 <head>

@@ -17,7 +17,7 @@ var generateNav = function () {
     brand.appendChild(document.createTextNode("PlsFundMe"));
     navLeft.appendChild(brand);
     var create = document.createElement("a");
-    create.setAttribute("href", "create.html");
+    create.setAttribute("href", "create.php");
     create.appendChild(document.createTextNode("Create"));
     navLeft.appendChild(create);
 

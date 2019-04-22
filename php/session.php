@@ -28,9 +28,5 @@ if(!$session_value && $here != "login.php"){
     header("location:login.php");
     die();
 }
-else {
-  $id = $_SESSION['loginID'];
-  $name = $_SESSION['loginUser'];
-}
 
 ?>

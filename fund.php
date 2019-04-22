@@ -1,3 +1,4 @@
+<?php include('php/nav.php'); ?>
 <!DOCTYPE html>
 <html>
 <head>
