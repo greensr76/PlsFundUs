@@ -1,4 +1,4 @@
-<?php include('php/session.php');?>
+<?php include('php/nav.php'); ?>
 <!DOCTYPE html>
 <html>
 <head>

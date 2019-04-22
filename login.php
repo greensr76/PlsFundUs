@@ -1,14 +1,14 @@
+<?php include('php/nav.php'); ?>
 <!DOCTYPE html>
 <html>
 <head>
     <title>Login | Pls Fund Us</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script src="javascript/functions.js"></script>
 </head>
 <body>
   <section class = "main">
 
-    <form class = "login" action = "php/login.php" method = "post">
+    <form class = "login" action = "php/handleLogin.php" method = "post">
       <h1> Sign In </h1>
       <div id = "labels">
         <label for="username">Username: </label> <br>
@@ -22,20 +22,9 @@
         <input class = "loginInput" type = "checkbox" name = "register" align = "right"><br>
 
       </div>
-      <input style: "float=right" type="submit" value ="Submit"> </button>
+      <input style="float:right" type="submit" value ="Submit"> </button>
 
     </form>
   </section>
 </body>
-
-
-
-
-
-
-
-
-
-
-
 </html>

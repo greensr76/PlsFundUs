@@ -16,19 +16,19 @@ if(isset($_POST["username"]) && isset($_POST["password"])){
   $db = new mysqli($servername,$username,$password,$dbName);
   // Check connection
   if ($db->connect_error) {
-      die("Connection failed: " . $db->connect_error);
+    die("Connection failed: " . $db->connect_error);
   }
 
   // Register User************************
   if (isset($_POST["register"])){
 
     $sql = $db->prepare("INSERT INTO users(NAME, PASSWORD) VALUES(?,?)");
-    $sql->bind_param("ss",$username, $password);
+    $sql->bind_param("ss",$userLogin, $userPassword);
 
     if ( $sql->execute() === TRUE) {
       echo "Register Successful";
 
-      header("location: ../login.html");
+      header("location: ../login.php");
     }
   }
 

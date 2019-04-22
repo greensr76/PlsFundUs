@@ -1,3 +1,5 @@
+<?php include('session.php');
+$nav = '<script>
 window.onload = function () {
     generateNav();
 }
@@ -20,14 +22,20 @@ var generateNav = function () {
     navLeft.appendChild(create);
 
     var register = document.createElement("a");
-    var session = '<?php echo $session_value; ?>';
-    if (session) { // Session
-        register.appendChild(document.createTextNode("Logout"));
-        register.setAttribute("href", "php/logout.php");
-    } else { // No session
-        register.appendChild(document.createTextNode("Register"));
-        register.setAttribute("href", "login.html");
-    }    
+    ';
+if ($session_value) {
+    $nav.= '
+    register.appendChild(document.createTextNode("Logout"));
+    register.setAttribute("href", "php/logout.php");
+    ';
+} else {
+    $nav.= '
+    register.appendChild(document.createTextNode("Register"));
+    register.setAttribute("href", "login.php");
+    ';
+}
+
+    $nav .= '
     navRight.appendChild(register);
 
     container.appendChild(navLeft);
@@ -35,3 +43,8 @@ var generateNav = function () {
     
     document.body.insertBefore(container, document.body.firstChild);
 }
+</script>';
+
+echo $nav;
+
+?>

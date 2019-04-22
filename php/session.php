@@ -12,14 +12,14 @@ if ($db->connect_error) {
     die("Connection failed: " . $db->connect_error);
 }
 
-//Attempted Session (I've never done of these before)
 if (!isset($_SESSION)) {
     session_start();
 }
 
 $session_value=(isset($_SESSION['loginID']));
-if(!$session_value || $session_value != true){
-    header("location:login.html");
+$here = basename($_SERVER['PHP_SELF']); // Are we already at login.php?
+if(!$session_value && $here != "login.php"){
+    header("location:login.php");
     die();
 }
 
