@@ -17,7 +17,7 @@ var generateNav = function () {
     brand.appendChild(document.createTextNode("PlsFundMe"));
     navLeft.appendChild(brand);
     var create = document.createElement("a");
-    create.setAttribute("href", "create.php");
+    create.setAttribute("href", "create.html");
     create.appendChild(document.createTextNode("Create"));
     navLeft.appendChild(create);
 
@@ -40,7 +40,7 @@ if ($session_value) {
 
     container.appendChild(navLeft);
     container.appendChild(navRight);
-    
+
     document.body.insertBefore(container, document.body.firstChild);
 }
 </script>';

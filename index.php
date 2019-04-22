@@ -6,8 +6,9 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+
     <section class="main">
-        <h1>The Big Project wiht Da Bois!!!!</h1>
+        <h1>The Big Project witt Da Bois!!!!</h1>
         <br>
         <p>TODO:</p>
         <ul>
