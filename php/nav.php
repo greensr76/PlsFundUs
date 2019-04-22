@@ -27,6 +27,10 @@ if ($session_value) {
     $nav.= '
     register.appendChild(document.createTextNode("Logout"));
     register.setAttribute("href", "php/logout.php");
+    var uname = document.createElement("a");
+    uname.appendChild(document.createTextNode("Hi, '.$_SESSION["loginUser"].'"));
+    uname.setAttribute("id", "navName");
+    navRight.appendChild(uname);
     ';
 } else {
     $nav.= '

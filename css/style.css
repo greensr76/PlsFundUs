@@ -67,3 +67,8 @@ body {
 .nav-right {
     float: right;
 }
+
+#navName {
+    background-color: white;
+    color: darkred;
+}
