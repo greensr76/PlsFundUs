@@ -1,4 +1,8 @@
-<?php include('php/session.php');?>
+<?php include('php/session.php');
+
+echo $_SESSION["loginUser"];
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,8 +11,9 @@
     <script src="javascript/functions.js"></script>
 </head>
 <body>
+
     <section class="main">
-        <h1>The Big Project wiht Da Bois!!!!</h1>
+        <h1>The Big Project witt Da Bois!!!!</h1>
         <br>
         <p>TODO:</p>
         <ul>
