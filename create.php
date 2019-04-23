@@ -13,10 +13,10 @@
         <ul>
             <li>Make sure all fields have placeholder text as hints</li>
         </ul>
-        <form action = "php/create.php" method = "post">
+        <form action = "php/insertFund.php" method = "post">
             <table>
                 <tr>
-                    <td><label for="name">Name: </label></td>
+                    <td><label for="name">*Name: </label></td>
                     <td><input type="text" name="name"></td>
                 </tr>
                 <tr>
@@ -28,7 +28,7 @@
                     <td><textarea rows="4" name="desc"></textarea></td>
                 </tr>
                 <tr>
-                    <td><label for="goal">Goal: </label></td>
+                    <td><label for="goal">*Goal: </label></td>
                     <td><input type="text" name="goal"></td>
                 </tr>
                 <tr>
