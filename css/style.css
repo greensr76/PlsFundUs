@@ -8,7 +8,7 @@ body {
     margin: 0% 15% 0% 15%;
     padding: 10px;
     background-color: white;
-    height: 95%;
+    height: auto;
     border: 3px solid darkgray;
     border-top: 0px;
     border-radius: 0px 0px 10px 10px;
@@ -43,13 +43,9 @@ body {
     color: darkred;
 }
 
-#tableImg{
-  height: 50px;
-  width: 50px;
-}
-
 table, input, textarea{
-    float: left;
+    text-align: center;
+    width: auto;
 }
 label {
     float: right;
@@ -57,4 +53,19 @@ label {
 }
 td {
     height: 30px;
+}
+
+.tableImg{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+#fundTable td {
+    width: 20%;
+    text-align: center;
+}
+
+#footer {
+    font-size: 8pt;
+    text-align: center;
 }
