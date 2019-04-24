@@ -11,10 +11,12 @@
         <br>
         <p>TODO:</p>
         <ul>
-            <li>"Create Fund" Page insert into Database (Steve) </li>
             <li>This page will show all currently active funds (Steve) </li>
+              <li> PHP file to grab all fund information and build JSON object and send to Javascript using AJAX (Steve) </li>
+              <li>Javascript file for index page to build funds on homepage (Steve) <li>
             <li>fund.html will grab information from the previous page and display that poll's info (Taylor) </li>
-            <li>change to PDO (Steve) </li>
+            <li>Save users image file into our images folder </li>
+
         </ul>
     </section>
 </body>

@@ -8,7 +8,7 @@ $goal = 0;
 $raised = 0;
 
 //Only Required Fields
-if(isset($_POST["name"]) && isset($_POST["goal"])){
+if(isset($_POST["name"]) && ($_POST["name"] != "") && isset($_POST["goal"]) && $_POST["goal"] != 0){
   $name = $_POST["name"];
   $goal = $_POST["goal"];
 
@@ -27,6 +27,10 @@ if(isset($_POST["name"]) && isset($_POST["goal"])){
 
   $sql->execute(array($name, $desc, $goal, $raised, $image, $loginID));
   header("location: ../index.php");
+}
+
+else{
+  header("location: ../create.php");
 }
 
 ?>
