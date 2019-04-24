@@ -4,6 +4,12 @@
 <head>
     <title>Home | Pls Fund Us</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script src="javascript/showFunds.js"></script>
+
+
+
 </head>
 <body>
     <section class="main">
@@ -18,6 +24,12 @@
             <li>Save users image file into our images folder </li>
 
         </ul>
+    </section>
+
+    <section id = "fundContainer">
+      <table id ="fundTable">
+
+      </table>
     </section>
 </body>
 </html>
