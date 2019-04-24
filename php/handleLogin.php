@@ -44,7 +44,7 @@ if(isset($_POST["username"]) && isset($_POST["password"])){
       echo "Login Successful";
       session_start();
       $_SESSION['loginID'] = $row['ID'];
-      $_SESSION['loginUser'] = $row['Name'];
+      $_SESSION['loginUser'] = $row['NAME'];
       header("location: ../index.php");
     }
     else {
