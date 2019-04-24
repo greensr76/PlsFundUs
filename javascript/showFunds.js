@@ -20,14 +20,9 @@
              var goal = response[i].goal;
              var imageSrc = "images/"+response[i].image;
 
-            //Check if we should use our default image
-            if(!validateImg(imageSrc)){
-              imageSrc = "images/test.png";
-            }
-
              var tr_str = "<tr>" +
                           // "<td>" + (i+1) + "</td>" + (Could use this line to count them)
-                           "<td>" + "<img class = tableImg src = " +imageSrc + " />" + "</td>" +
+                           "<td>" + "<img class='tableImg' src = " +imageSrc + " onerror='replaceImg(this);'/>" + "</td>" +
                            "<td>" + name + "</td>" +
                            "<td>" + desc + "</td>" +
                            "<td>" + raised + "</td>" +
@@ -44,14 +39,8 @@
     });
   }
 
-  function validateImg(source){
-    var image = new Image();
-    image.src = source;
-
-    if (image.width == 0){
-      return false;
-    }
-    else{
-      return true;
-    }
+  function replaceImg(image){
+    image.onerror = "";
+    image.src = "./images/test.png";
+    return true;
   }
