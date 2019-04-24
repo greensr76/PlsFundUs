@@ -17,19 +17,28 @@
         <br>
         <p>TODO:</p>
         <ul>
-            <li>This page will show all currently active funds (Steve) </li>
-              <li> PHP file to grab all fund information and build JSON object and send to Javascript using AJAX (Steve) </li>
-              <li>Javascript file for index page to build funds on homepage (Steve) <li>
+            <li> Resize table images to all be same height (Should be under the same class) </li>
+            <li> Have one of the columns be a link to fund page (Maybe save showign the description for fund page)</li>
+            <li> Fund page will have giant progress bar and ability to Donate to fund <li>
             <li>fund.html will grab information from the previous page and display that poll's info (Taylor) </li>
             <li>Save users image file into our images folder </li>
 
         </ul>
+
+        <section id = "fundContainer">
+          <table id ="fundTable">
+            <tr>
+              <th> </th>
+              <th> Name </th>
+              <th> Description </th>
+              <th> Raised </th>
+              <th> Goal </th>
+            </tr>
+          </table>
+        </section>
+
     </section>
 
-    <section id = "fundContainer">
-      <table id ="fundTable">
 
-      </table>
-    </section>
 </body>
 </html>

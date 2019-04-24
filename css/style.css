@@ -43,6 +43,11 @@ body {
     color: darkred;
 }
 
+#tableImg{
+  height: 50px;
+  width: 50px;
+}
+
 table, input, textarea{
     float: left;
 }

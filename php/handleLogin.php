@@ -4,8 +4,8 @@ $username = "";
 $password = "";
 
 if(isset($_POST["username"]) && isset($_POST["password"])){
-  $userLogin = $_POST["username"];
-  $userPassword = $_POST["password"];
+  $userLogin = strtolower($_POST["username"]);
+  $userPassword = strtolower($_POST["password"]);
 
   // Connect to DB
   $servername = "localhost";

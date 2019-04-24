@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 17, 2019 at 07:00 PM
+-- Generation Time: Apr 24, 2019 at 11:15 PM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.3
 
@@ -37,6 +37,15 @@ CREATE TABLE `funds` (
   `USERID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `funds`
+--
+
+INSERT INTO `funds` (`NAME`, `DESCRIPTION`, `GOAL`, `RAISED`, `IMAGE`, `USERID`) VALUES
+('Lebron', 'Witness Greatness! Help me return to the Finals', 2147483647, 0, 'lebronDunk.jpg', 6),
+('New Whip', 'Get Taylor a Lambo', 300000, 0, 'lambo.jpg', 6),
+('Stephen', 'Please Help Me Buy a Switch', 350, 0, 'IMG_1683.JPG', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -45,9 +54,18 @@ CREATE TABLE `funds` (
 
 CREATE TABLE `users` (
   `ID` int(11) NOT NULL,
-  `Name` text,
-  `Password` text
+  `NAME` text,
+  `PASSWORD` text
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`ID`, `NAME`, `PASSWORD`) VALUES
+(1, 'stephen', 'password'),
+(6, 'kingjames', 'lakers'),
+(7, 'test', '123');
 
 --
 -- Indexes for dumped tables
@@ -74,7 +92,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Constraints for dumped tables

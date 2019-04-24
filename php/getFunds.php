@@ -24,7 +24,7 @@ include('session.php');
     echo json_encode($json);
 
 
-  }
+  
 
 
 
