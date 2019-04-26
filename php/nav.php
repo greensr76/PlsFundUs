@@ -13,7 +13,7 @@ var generateNav = function () {
     navRight.setAttribute("class", "nav-right");
 
     var brand = document.createElement("a");
-    brand.setAttribute("href", "index.php");
+    brand.setAttribute("href", "./");
     brand.appendChild(document.createTextNode("PlsFundMe"));
     navLeft.appendChild(brand);
     var create = document.createElement("a");
