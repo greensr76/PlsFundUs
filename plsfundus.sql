@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `funds` (
-  `ID` int NOT NULL,
+  `ID` int NOT NULL AUTO_INCREMENT,
   `NAME` varchar(30) NOT NULL,
   `DESCRIPTION` text NOT NULL,
   `GOAL` int(11) NOT NULL,

@@ -14,11 +14,11 @@
             <li>Make sure all fields have placeholder text as hints</li>
         </ul>
         <section>
-            <form action = "php/insertFund.php" method = "post">
+            <form action = "php/insertFund.php" method = "post" enctype="multipart/form-data">
                 <table>
                     <tr>
                         <td><label for="name">*Name: </label></td>
-                        <td><input type="text" name="name"></td>
+                        <td><input type="text" name="name" required></td>
                     </tr>
                     <tr>
                         <td><label for="image">Image: </label></td>
@@ -30,7 +30,7 @@
                     </tr>
                     <tr>
                         <td><label for="goal">*Goal: </label></td>
-                        <td><input type="text" name="goal"></td>
+                        <td><input type="text" name="goal" required></td>
                     </tr>
                     <tr>
                         <td><button type="submit">Submit</button></td>
