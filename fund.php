@@ -10,33 +10,28 @@
 </head>
 <body>
     <section class="main">
-        <h1>This is a poll</h1>
+        <table class="fundInfo">
+            <tr>
+                <td rowspan=2 class="td_image"><img id="fundImg" class="tableImg" src="images/test.png"></td>
+                <td><h1 id="fundName">This is a poll name</h1></td>
+            </tr>
+            <tr>
+                <td><h5 id="desc">This is a description</h5></td>
+            </tr>
+        </table>      
         <br>
-        <p>TODO:</p>
-        <ul>
-            <li>Import all data for this fund id from the database</li>
-        </ul>
         <section id = "progressShell">
-          <section id = "progressBar">
-            <span> Raised: $ </span>
-          </section>
-          <span> Goal: $$$ </span>
+            <section id = "progressBar">
+                <span> Raised: $<span id="raised">0</span></span>
+            </section>
+            <span> Goal: $<span id="goal">0</span> </span>
         </section>
-
         <br>
-
-        <form >
+        <form>
             <p> Donate: </p>
-            <input type = "text" name = "donate"> </input>
+            <input type = "text" name = "donate">
             <button type="submit">Submit</button>
-
-
         </form>
-
     </section>
-
-
-
-
 </body>
 </html>

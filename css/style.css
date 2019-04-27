@@ -44,7 +44,6 @@ body {
 }
 
 table, input, textarea{
-    text-align: center;
     width: auto;
 }
 label {
@@ -72,6 +71,14 @@ td {
 #fundTable td {
     width: 20%;
     text-align: center;
+}
+
+.fundInfo {
+    width: 100%;
+    border: 1px solid red;
+}
+.fundInfo td {
+    width: 50%;
 }
 
 #footer {
