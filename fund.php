@@ -16,7 +16,27 @@
         <ul>
             <li>Import all data for this fund id from the database</li>
         </ul>
-        <section id="fund"></section>
+        <section id = "progressShell">
+          <section id = "progressBar">
+            <span> Raised: $ </span>
+          </section>
+          <span> Goal: $$$ </span>
+        </section>
+
+        <br>
+
+        <form >
+            <p> Donate: </p>
+            <input type = "text" name = "donate"> </input>
+            <button type="submit">Submit</button>
+
+
+        </form>
+
     </section>
+
+
+
+
 </body>
 </html>
