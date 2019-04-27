@@ -13,9 +13,10 @@ if(isset($_POST["name"]) && ($_POST["name"] != "") && isset($_POST["goal"]) && $
   $goal = $_POST["goal"];
 
   //Optional Fields
-  if(isset($_POST["image"]) && $_POST["image"] != null) {
-    $image = $_POST["image"];
-  }
+
+    $image = basename($_FILES["image"]["name"]);
+    echo $image;
+
   if(isset($_POST["desc"])) {
     $desc = $_POST["desc"];
   }
@@ -28,17 +29,18 @@ if(isset($_POST["name"]) && ($_POST["name"] != "") && isset($_POST["goal"]) && $
   $sql->execute(array($name, $desc, $goal, $raised, $image, $loginID));
   saveImage();
 
-  //header("location: ../index.php");
+  header("location: ../index.php");
 }
 
 else{
-//  header("location: ../create.php");
+  header("location: ../create.php");
 }
 
 
 function saveImage(){
-  $dir = "images/";
+  $dir = "../images/";
   $newFile = $dir.basename($_FILES["image"]["name"]);
+
   $imageFileType = strtolower(pathinfo($newFile,PATHINFO_EXTENSION));
   $upload = 1;
 
