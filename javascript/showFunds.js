@@ -14,6 +14,7 @@
            var len = response.length;
            //Retrieve and assign all our information from the php file
            for(var i=0; i<len; i++){
+             var id = response[i].id;
              var name = response[i].name;
              var desc = response[i].desc;
              var raised = response[i].raised;
@@ -23,7 +24,7 @@
              var tr_str = "<tr>" +
                           // "<td>" + (i+1) + "</td>" + (Could use this line to count them)
                            "<td>" + "<img class='tableImg' src = " +imageSrc + " onerror='replaceImg(this);'/>" + "</td>" +
-                           "<td>" + name + "</td>" +
+                           "<td><a href='fund.php?fundName=" + name + "'>" + name + "</a></td>" +
                            "<td>" + desc + "</td>" +
                            "<td>" + raised + "</td>" +
                            "<td>" + goal + "</td>" +

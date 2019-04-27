@@ -60,6 +60,15 @@ td {
     width: 100%;
     height: auto;
 }
+#fundTable {
+    border-collapse: collapse;
+}
+#fundTable tr {
+    border: 1px solid rgb(94, 123, 133);
+}
+#fundTable tr:nth-child(even) {
+    background-color: lightgray;
+}
 #fundTable td {
     width: 20%;
     text-align: center;

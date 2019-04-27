@@ -29,6 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `funds` (
+  `ID` int NOT NULL,
   `NAME` varchar(30) NOT NULL,
   `DESCRIPTION` text NOT NULL,
   `GOAL` int(11) NOT NULL,
@@ -75,7 +76,7 @@ INSERT INTO `users` (`ID`, `NAME`, `PASSWORD`) VALUES
 -- Indexes for table `funds`
 --
 ALTER TABLE `funds`
-  ADD PRIMARY KEY (`NAME`),
+  ADD PRIMARY KEY (`ID`),
   ADD KEY `USERID` (`USERID`);
 
 --
@@ -92,7 +93,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Constraints for dumped tables
@@ -102,6 +103,7 @@ ALTER TABLE `users`
 -- Constraints for table `funds`
 --
 ALTER TABLE `funds`
+  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
   ADD CONSTRAINT `funds_ibfk_1` FOREIGN KEY (`USERID`) REFERENCES `users` (`ID`);
 COMMIT;
 

@@ -13,6 +13,7 @@ include('session.php');
   while($row = $sql->fetch(PDO::FETCH_ASSOC)){
     //Builds array for each fund
     //Pushes into Overarching JSON array to be sent
+    $fund['id'] = $row['ID'];
     $fund['name'] = $row['NAME'];
     $fund['desc'] = $row['DESCRIPTION'];
     $fund['goal'] = $row['GOAL'];
