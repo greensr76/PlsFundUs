@@ -2,8 +2,8 @@
 
 include('session.php');
 
-$fundName = $_GET["fundName"];
-$sql =  $db->prepare("SELECT * FROM funds WHERE NAME='$fundName'");
+$fundID = $_POST["fundID"];
+$sql =  $db->prepare("SELECT * FROM funds WHERE ID=$fundID");
 $sql->execute();
 
 $json = $sql->fetch(PDO::FETCH_ASSOC);

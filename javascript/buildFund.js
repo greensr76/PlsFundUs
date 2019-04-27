@@ -4,7 +4,20 @@ $(function() {
 
 function getUrlVars() {
     var url = window.location.href;
-    var captured = /fundID=([^&]+)/.exec(url)[1];
-    var result = captured ? captured : 'Default';
-    return result;
+    var result = /fundID=([^&]+)/.exec(url)[1];
+    $.ajax ({
+        url:"php/showFund.php",
+        type:"POST",
+        data: {
+            fundID: result
+        },
+      success: function(response) {
+          console.log(response);
+      } // success
+        ,
+        error: function (xhr, ajaxOptions, thrownError) {
+          alert(xhr.status);
+          alert (thrownError)
+        }
+    });
 }

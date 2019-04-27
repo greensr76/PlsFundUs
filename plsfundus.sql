@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `funds` (
-  `ID` int NOT NULL AUTO_INCREMENT,
+  `ID` int NOT NULL primary key AUTO_INCREMENT,
   `NAME` varchar(30) NOT NULL,
   `DESCRIPTION` text NOT NULL,
   `GOAL` int(11) NOT NULL,
@@ -54,7 +54,7 @@ INSERT INTO `funds` (`NAME`, `DESCRIPTION`, `GOAL`, `RAISED`, `IMAGE`, `USERID`)
 --
 
 CREATE TABLE `users` (
-  `ID` int(11) NOT NULL,
+  `ID` int(11) NOT NULL primary key AUTO_INCREMENT,
   `NAME` text,
   `PASSWORD` text
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -73,29 +73,6 @@ INSERT INTO `users` (`ID`, `NAME`, `PASSWORD`) VALUES
 --
 
 --
--- Indexes for table `funds`
---
-ALTER TABLE `funds`
-  ADD PRIMARY KEY (`ID`),
-  ADD KEY `USERID` (`USERID`);
-
---
--- Indexes for table `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`ID`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `users`
---
-ALTER TABLE `users`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- Constraints for dumped tables
 --
 
@@ -103,7 +80,6 @@ ALTER TABLE `users`
 -- Constraints for table `funds`
 --
 ALTER TABLE `funds`
-  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
   ADD CONSTRAINT `funds_ibfk_1` FOREIGN KEY (`USERID`) REFERENCES `users` (`ID`);
 COMMIT;
 
