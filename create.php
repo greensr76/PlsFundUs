@@ -37,7 +37,7 @@
         </section>
         <section id="footer">
         <hr>
-        <p>Created By Taylor Duvall and Stephen Green</p>
+        <p>PlsFundMe was developed by Taylor Duvall and Stephen Green</p>
         </section>
     </section>
 </body>
