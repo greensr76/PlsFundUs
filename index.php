@@ -12,11 +12,7 @@
   <section class="main">
     <h1>Fundraiser Feed</h1>
     <br>
-    <p>TODO:</p>
-    <ul>
-      <li>Allow user to donate to a fund</li>
-      <li>Save users image file into our images folder </li>
-    </ul>
+
 
     <section id = "fundContainer">
       <table id ="fundTable">

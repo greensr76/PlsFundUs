@@ -9,6 +9,7 @@
     <section class="main">
         <h1>Create a new poll</h1>
         <br>
+
         <section>
             <form action = "php/insertFund.php" method = "post" enctype="multipart/form-data">
                 <table>
