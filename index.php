@@ -12,13 +12,7 @@
   <section class="main">
     <h1>Fundraiser Feed</h1>
     <br>
-    <p>TODO:</p>
-    <ul>
-      <li> Have one of the columns be a link to fund page (Maybe save showign the description for fund page)</li>
-      <li> Fund page will have giant progress bar and ability to Donate to fund </li>
-      <li>fund.html will grab information from the previous page and display that poll's info (Taylor) </li>
-      <li>Save users image file into our images folder </li>
-    </ul>
+
 
     <section id = "fundContainer">
       <table id ="fundTable">
@@ -33,7 +27,7 @@
     </section>
     <section id="footer">
       <hr>
-      <p>We need to add some text or just a 'hr' below the table for formatting to work</p>
+      <p> Created By Taylor Duvall and Stephen Green</p>
     </section>
   </section>
 </body>
