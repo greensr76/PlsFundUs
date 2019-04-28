@@ -25,7 +25,7 @@
         </section>
         Goal: $<span id="goal">0</span>
         <br>
-        <form action = "donate.php" methdo = "POST">
+        <form action = "php/donate.php" method = "POST">
             <p> Donate: </p>
             <input type = "text" name = "donate">
             <button type="submit">Submit</button>
