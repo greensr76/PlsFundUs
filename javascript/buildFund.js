@@ -19,12 +19,15 @@ function getUrlVars() {
             var raised = response.RAISED;
             var goal = response.GOAL;
             var imageSrc = "images/"+response.IMAGE;
-            
+
             $("#fundName").text(name);
             $("#raised").text(raised);
             $("#goal").text(goal);
             $("#desc").text(desc);
             $("#fundImg").attr("src", imageSrc);
+
+            var percentRaised = (raised/ goal) * 100;
+            $("#progressBar").width(percentRaised+"%");
         }
         ,
         error: function (xhr, ajaxOptions, thrownError) {
