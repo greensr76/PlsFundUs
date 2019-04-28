@@ -20,7 +20,7 @@ function buildFund() {
             var goal = response.GOAL;
             var percent = (raised / goal) * 100;
             var imageSrc = "images/"+response.IMAGE;
-            
+
             $("#fundName").text(name);
             $("#raised").text(raised);
             $("#goal").text(goal);
@@ -50,4 +50,3 @@ function buildFund() {
         }
     });
 }
-
