@@ -10,22 +10,20 @@
 </head>
 <body>
     <section class="main">
-        <table class="fundInfo">
-            <tr>
-                <td rowspan=2 class="td_image"><img id="fundImg" class="tableImg" src="images/test.png"></td>
-                <td><h1 id="fundName">This is a poll name</h1></td>
-            </tr>
-            <tr>
-                <td><h5 id="desc">This is a description</h5></td>
-            </tr>
-        </table>      
-        <br>
-        <section id = "progressShell">
-            <section id = "progressBar">
-                <span> Raised: $<span id="raised">0</span></span>
+        <section class="fundInfo">
+            <img class="fundImg" src="images/test.png">
+            <section>
+                <h1 id="fundName">This is a poll name</h1>
+                <p id="desc">This is a description</p>
             </section>
-            <span> Goal: $<span id="goal">0</span> </span>
         </section>
+        <br/>
+        <section id = "progressShell">
+            <section id="progressBar">
+                <article>Raised: $<span id="raised">0</span></article><article id = "percent">(0%)</article>
+            </section>
+        </section>
+        Goal: $<span id="goal">0</span>
         <br>
         <form>
             <p> Donate: </p>

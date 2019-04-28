@@ -9,10 +9,6 @@
     <section class="main">
         <h1>Create a new poll</h1>
         <br>
-        <p>TODO:</p>
-        <ul>
-            <li>Make sure all fields have placeholder text as hints</li>
-        </ul>
         <section>
             <form action = "php/insertFund.php" method = "post" enctype="multipart/form-data">
                 <table>
@@ -40,7 +36,7 @@
         </section>
         <section id="footer">
         <hr>
-        <p>We need to add some text or just a 'hr' below the table for formatting to work</p>
+        <p>PlsFundMe was developed by Taylor Duvall and Stephen Green</p>
         </section>
     </section>
 </body>

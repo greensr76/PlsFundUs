@@ -1,8 +1,8 @@
 $(function() {
-    result = getUrlVars();
+    result = buildFund();
 });
 
-function getUrlVars() {
+function buildFund() {
     var url = window.location.href;
     var result = /fundID=([^&]+)/.exec(url)[1];
     $.ajax ({
@@ -18,13 +18,30 @@ function getUrlVars() {
             var desc = response.DESCRIPTION;
             var raised = response.RAISED;
             var goal = response.GOAL;
+            var percent = (raised / goal) * 100;
             var imageSrc = "images/"+response.IMAGE;
             
             $("#fundName").text(name);
             $("#raised").text(raised);
             $("#goal").text(goal);
             $("#desc").text(desc);
-            $("#fundImg").attr("src", imageSrc);
+            $(".fundImg").attr("src", imageSrc);
+
+            progressBar();
+            function progressBar() {
+                var bar = document.getElementById("progressBar");
+                var width = 0;
+                var id = setInterval(frame, 10);
+                function frame() {
+                    if (width >= percent) {
+                        clearInterval(id);
+                    } else {
+                        width+=0.5;
+                        bar.style.width = width + '%';
+                        $("#percent").text(' (' + width * 1 + '%)');
+                    }
+                }
+            }
         }
         ,
         error: function (xhr, ajaxOptions, thrownError) {
@@ -33,3 +50,4 @@ function getUrlVars() {
         }
     });
 }
+
