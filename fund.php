@@ -18,7 +18,7 @@
             <tr>
                 <td><h5 id="desc">This is a description</h5></td>
             </tr>
-        </table>      
+        </table>
         <br>
         <section id = "progressShell">
             <section id = "progressBar">
@@ -27,7 +27,7 @@
             <span> Goal: $<span id="goal">0</span> </span>
         </section>
         <br>
-        <form>
+        <form action = "donate.php" methdo = "POST">
             <p> Donate: </p>
             <input type = "text" name = "donate">
             <button type="submit">Submit</button>
