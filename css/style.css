@@ -78,6 +78,7 @@ td {
 #fundTable td {
     width: 20%;
     text-align: center;
+    font-size: 24px;
 }
 
 .fundInfo {
@@ -123,12 +124,22 @@ h1{
   background-color: lightgray;
   color: darkred;
   height: 45px;
-  font-size: 38px;
+  font-size: 42px;
   margin-bottom: 5px;
 }
+
+th{
+  font-size: 30px;
+}
+
+
 
 .userInput{
   margin-left:30%;
   text-align: center;
   font-size: 150%;
+}
+
+.fullyFunded{
+  background-color: #64de22;
 }

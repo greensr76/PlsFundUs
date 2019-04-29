@@ -18,13 +18,18 @@ function buildFunds(){
         var goal = response[i].goal;
         var imageSrc = "images/"+response[i].image;
 
-        var tr_str = 
-          "<tr>" +
+
+        var className = "";
+        if (raised >= goal){
+          className = "fullyFunded";
+        }
+        var tr_str =
+          "<tr class = 'fullyFunded'">" +
           // "<td>" + (i+1) + "</td>" + (Could use this line to count them)
             "<td>" + "<img class='tableImg' src = " +imageSrc + " onerror='replaceImg(this);'/>" + "</td>" +
             "<td><a href='fund.php?fundID=" + id + "'>" + name + "</a></td>" +
             "<td>" + desc + "</td>" +
-            "<td>" + raised + "</td>" +
+            "<td >" + raised + "</td>" +
             "<td>" + goal + "</td>" +
           "</tr>";
       $("#fundTable tbody").append(tr_str);
