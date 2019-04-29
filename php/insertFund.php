@@ -13,9 +13,8 @@ if(isset($_POST["name"]) && ($_POST["name"] != "") && isset($_POST["goal"]) && $
   $goal = $_POST["goal"];
 
   //Optional Fields
-
-    $image = basename($_FILES["image"]["name"]);
-    echo $image;
+  $image = basename($_FILES["image"]["name"]);
+  $image = preg_replace("/ /", "-", $image);
 
   if(isset($_POST["desc"])) {
     $desc = $_POST["desc"];
@@ -40,6 +39,7 @@ else{
 function saveImage(){
   $dir = "../images/";
   $newFile = $dir.basename($_FILES["image"]["name"]);
+  $newFile = preg_replace("/ /", "-", $newFile);
 
   $imageFileType = strtolower(pathinfo($newFile,PATHINFO_EXTENSION));
   $upload = 1;
@@ -48,14 +48,13 @@ function saveImage(){
   if(isset($_POST["image"])) {
     $check = getimagesize($_FILES["image"]["tmp_name"]);
     if($check !== false) {
-        echo "File is an image - " . $check["mime"] . ".";
-        $upload = 1;
+      echo "File is an image - " . $check["mime"] . ".";
+      $upload = 1;
     } else {
-        echo "File is not an image.";
-        $upload = 0;
+      echo "File is not an image.";
+      $upload = 0;
     }
   }
-
 
   //Check if file already exists
   if (file_exists($newFile)) {
