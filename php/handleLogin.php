@@ -27,29 +27,24 @@ if(isset($_POST["username"]) && isset($_POST["password"])){
 
     if ( $sql->execute() === TRUE) {
       echo "Register Successful";
-
-      header("location: ../login.php");
     }
   }
 
   // Sign In Existing User *******************
-  else{
+  $sql = "SELECT * FROM users WHERE NAME = '$userLogin' AND PASSWORD = '$userPassword'";
+  $result = $db->query($sql);
 
-    $sql = "SELECT * FROM users WHERE NAME = '$userLogin' AND PASSWORD = '$userPassword'";
-    $result = $db->query($sql);
+  if ($result->num_rows > 0) {
+    $row = $result->fetch_assoc();
 
-    if ($result->num_rows > 0) {
-      $row = $result->fetch_assoc();
-
-      echo "Login Successful";
-      session_start();
-      $_SESSION['loginID'] = $row['ID'];
-      $_SESSION['loginUser'] = $row['NAME'];
-      header("location: ../index.php");
-    }
-    else {
-      echo "Invalid Login";
-    }
+    echo "Login Successful";
+    session_start();
+    $_SESSION['loginID'] = $row['ID'];
+    $_SESSION['loginUser'] = $row['NAME'];
+    header("location: ../index.php");
+  }
+  else {
+    echo "Invalid Login";
   }
 
 }

@@ -20,7 +20,7 @@
         </tr>
         <tr>
           <td><label for ="register">New Account?</label></td>
-          <td><input class="loginInput" type="checkbox" name="register"></td>
+          <td><input class="loginInput checkbox" type="checkbox" name="register"></td>
         </tr>
         <tr>
           <td></td> <td><button type="submit" value ="Submit">Submit</button></td>

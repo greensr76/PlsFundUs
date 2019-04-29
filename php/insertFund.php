@@ -14,7 +14,12 @@ if(isset($_POST["name"]) && ($_POST["name"] != "") && isset($_POST["goal"]) && $
 
   //Optional Fields
   $image = basename($_FILES["image"]["name"]);
-  $image = preg_replace("/ /", "-", $image);
+  if ($image == "" || $image == null) {
+    $image = "test.png";
+  } else {
+    $image = preg_replace("/ /", "-", $image);
+    saveImage();
+  }
 
   if(isset($_POST["desc"])) {
     $desc = $_POST["desc"];
@@ -26,7 +31,6 @@ if(isset($_POST["name"]) && ($_POST["name"] != "") && isset($_POST["goal"]) && $
   VALUES(?,?,?,?,?,?)");
 
   $sql->execute(array($name, $desc, $goal, $raised, $image, $loginID));
-  saveImage();
 
   header("location: ../index.php");
 }
@@ -63,19 +67,16 @@ function saveImage(){
   }
 
   // Allow certain file formats
-if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-  && $imageFileType != "gif" ) {
-    echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
-    $uploadOk = 0;
-}
-
+  if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+    && $imageFileType != "gif" ) {
+      echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+      $uploadOk = 0;
+  }
 
   //Upload File if passes checks
   if ($upload == 1){
     move_uploaded_file($_FILES["image"]["tmp_name"],$newFile);
-  }
-
-  else {
+  } else {
     echo "Invalid File";
   }
 
