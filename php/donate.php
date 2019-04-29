@@ -10,15 +10,13 @@ include('session.php');
 
 
     $fundID = $_POST["fundID"];
-    echo $fundID;
 
-    $sql = $db->prepare("UPDATE funds SET RAISED = RAISED + '$donated' WHERE ID = ?");
-    $sql->bind_param("i",$fundID);
+    $sql = $db->prepare("UPDATE funds SET RAISED = RAISED + ? WHERE ID = ?");
 
-    if ( $sql->execute($donated) === TRUE) {
+    if ( $sql->execute(array($donated, $fundID)) === TRUE) {
       echo "Donation Successful";
 
-      header("location: ../index.php");
+      header("location: ../fund.php?fundID=$fundID");
     }
 
   }
