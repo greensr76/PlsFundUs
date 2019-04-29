@@ -12,7 +12,7 @@
 
         <section>
             <form action = "php/insertFund.php" method = "post" enctype="multipart/form-data">
-                <table>
+                <table class = "userInput">
                     <tr>
                         <td><label for="name">*Name: </label></td>
                         <td><input type="text" name="name" required></td>
@@ -30,6 +30,7 @@
                         <td><input type="text" name="goal" required></td>
                     </tr>
                     <tr>
+                        <td></td>
                         <td><button type="submit">Submit</button></td>
                     </tr>
                 </table>

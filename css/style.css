@@ -43,6 +43,13 @@ body {
     color: darkred;
 }
 
+button{
+  color: darkred;
+  background-color: lightgray;
+  font-size: 20px;
+  width: 100%;
+}
+
 table, input, textarea{
     width: auto;
 }
@@ -113,7 +120,8 @@ td {
 h1{
   text-align: center;
   width: 100%;
-  background-color: red;
+  background-color: lightgray;
+  color: darkred;
   height: 45px;
   font-size: 38px;
   margin-bottom: 5px;
