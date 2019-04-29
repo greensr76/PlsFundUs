@@ -8,30 +8,29 @@ function buildFunds(){
     method:"POST",
     dataType:"JSON",
   success: function(response) {
-      var len = response.length;
-      //Retrieve and assign all our information from the php file
-      for(var i=0; i<len; i++){
-        var id = response[i].id;
-        var name = response[i].name;
-        var desc = response[i].desc;
-        var raised = response[i].raised;
-        var goal = response[i].goal;
-        var imageSrc = "images/"+response[i].image;
+    var len = response.length;
+    //Retrieve and assign all our information from the php file
+    for(var i=0; i<len; i++){
+      var id = response[i].id;
+      var name = response[i].name;
+      var desc = response[i].desc;
+      var raised = response[i].raised;
+      var goal = response[i].goal;
+      var imageSrc = "images/"+response[i].image;
 
-
-        var className = "";
-        if (raised >= goal){
-          className = "fullyFunded";
-        }
-        var tr_str =
-          "<tr class = 'fullyFunded'">" +
-          // "<td>" + (i+1) + "</td>" + (Could use this line to count them)
-            "<td>" + "<img class='tableImg' src = " +imageSrc + " onerror='replaceImg(this);'/>" + "</td>" +
-            "<td><a href='fund.php?fundID=" + id + "'>" + name + "</a></td>" +
-            "<td>" + desc + "</td>" +
-            "<td >" + raised + "</td>" +
-            "<td>" + goal + "</td>" +
-          "</tr>";
+      var tr_str = "<tr";
+      if (raised >= goal){
+        tr_str += " class='fullyFunded'";
+      }
+      tr_str +=
+      (
+        "><td>" + "<img class='tableImg' src = " + imageSrc + " onerror='replaceImg(this);'/>" + "</td>" +
+        "<td><a href='fund.php?fundID=" + id + "'>" + name + "</a></td>" +
+        "<td class='desc'>" + desc + "</td>" +
+        "<td >" + raised + "</td>" +
+        "<td>" + goal + "</td>" +
+      "</tr>"
+      );
       $("#fundTable tbody").append(tr_str);
     } // for loop
   } // success

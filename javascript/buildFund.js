@@ -27,6 +27,10 @@ function buildFund() {
             $("#desc").text(desc);
             $(".fundImg").attr("src", imageSrc);
             $("#fundID").val(id);
+            if (percent >= 100) {
+                $(".form").hide();
+                $(".main").append("<h3>Congratulations, you're fully funded!</h3>");
+            }
 
             progressBar();
             function progressBar() {
