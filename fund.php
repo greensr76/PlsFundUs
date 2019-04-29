@@ -26,10 +26,14 @@
         Goal: $<span id="goal">0</span>
         <br>
         <form action = "php/donate.php" method = "POST">
-            <p> Donate: </p>
-            <input type = "text" name = "donate">
-            <input type = "hidden" id="fundID" name = "fundID">
-            <button type="submit">Submit</button>
+          <table class = "userInput">
+            <tr>
+              <td>  <p> Donate: </p> </td>
+              <td>  <input type = "text" name = "donate">
+                <input type = "hidden" id="fundID" name = "fundID"> </td>
+              <td>  <button type="submit">Submit</button> </td>
+            </tr>
+          </table>
         </form>
     </section>
 </body>
