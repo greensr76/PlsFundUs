@@ -43,6 +43,13 @@ body {
     color: darkred;
 }
 
+button{
+  color: darkred;
+  background-color: lightgray;
+  font-size: 20px;
+  width: 100%;
+}
+
 table, input, textarea{
     width: auto;
 }
@@ -108,4 +115,20 @@ td {
   width: 0%;
   height: 100%;
   background-color: #64de22;
+}
+
+h1{
+  text-align: center;
+  width: 100%;
+  background-color: lightgray;
+  color: darkred;
+  height: 45px;
+  font-size: 38px;
+  margin-bottom: 5px;
+}
+
+.userInput{
+  margin-left:30%;
+  text-align: center;
+  font-size: 150%;
 }
