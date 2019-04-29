@@ -109,3 +109,18 @@ td {
   height: 100%;
   background-color: #64de22;
 }
+
+h1{
+  text-align: center;
+  width: 100%;
+  background-color: red;
+  height: 45px;
+  font-size: 38px;
+  margin-bottom: 5px;
+}
+
+.userInput{
+  margin-left:30%;
+  text-align: center;
+  font-size: 150%;
+}

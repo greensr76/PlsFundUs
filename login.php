@@ -9,7 +9,7 @@
   <section class="main">
     <h1>Sign In</h1>
     <form class="login" action="php/handleLogin.php" method="post">
-      <table>
+      <table class = "userInput">
         <tr>
           <td><label for="username">Username: </label></td>
           <td><input class="loginInput" type="text" name="username"></td>
@@ -23,7 +23,7 @@
           <td><input class="loginInput" type="checkbox" name="register"></td>
         </tr>
         <tr>
-          <td colspan="2"><button type="submit" value ="Submit">Submit</button></td>
+          <td></td> <td><button type="submit" value ="Submit">Submit</button></td>
         </tr>
       </table>
     </form>
