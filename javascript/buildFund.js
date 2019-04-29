@@ -26,6 +26,7 @@ function buildFund() {
             $("#goal").text(goal);
             $("#desc").text(desc);
             $(".fundImg").attr("src", imageSrc);
+            $("#fundID").val(id);
 
             progressBar();
             function progressBar() {

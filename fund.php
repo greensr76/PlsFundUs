@@ -28,7 +28,7 @@
         <form action = "php/donate.php" method = "POST">
             <p> Donate: </p>
             <input type = "text" name = "donate">
-            <input type = "hidden" name = "fundID" value = 1>
+            <input type = "hidden" id="fundID" name = "fundID">
             <button type="submit">Submit</button>
         </form>
     </section>
